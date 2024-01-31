@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Configuration options...
+    outDir: 'dist',
   },
   server: {
     // Configure server options for HMR and local development
