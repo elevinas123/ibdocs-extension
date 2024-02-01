@@ -1,6 +1,5 @@
 (function() {
     console.log("sitas cia gerai bus turetuveikt")
-    if (!history.state || !history.state.buttonsAdded) {
         console.log("praejo history")
         const tailwindLink = document.createElement('link');
         tailwindLink.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
@@ -8,9 +7,10 @@
         tailwindLink.rel = 'stylesheet';
         document.head.appendChild(tailwindLink);
 
-
+        console.log("cia")
         const observer = new MutationObserver((mutations, observer) => {
-            const listItems = document.querySelectorAll('#items > li.item');
+            const listItems = document.querySelectorAll('tbody > tr');
+            console.log("listItems", listItems)
             if (listItems.length > 0) {
                 listItems.forEach((item, index) => {
                     const itemName = item.querySelector('.label').innerText.trim();
@@ -74,5 +74,4 @@
 
         observer.observe(document.body, { childList: true, subtree: true });
         history.replaceState({ ...history.state, buttonsAdded: true }, '');
-    }
 })()

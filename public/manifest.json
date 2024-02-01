@@ -15,11 +15,18 @@
     ],
     "host_permissions": [
       "http://*/*",
-      "https://*/*"
+      "https://*/*",
+      "http://repo4udpz5ip2sk7m4c2aazxroaivsyw2dj5ctsnyfx2ami2ayhn43ad.onion/*"
     ],
     "background": {
       "service_worker": "background.js"
-    }
+    },
+    "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["contentScript.js"]
+      }
+  ]
     
   }
   

@@ -1,4 +1,4 @@
-
+console.log("hi cia")
 
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     console.log('History state updated in tab:', details.tabId);
@@ -7,8 +7,8 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     // Execute your content script in the tab that had the URL change
     chrome.scripting.executeScript({
         target: { tabId: details.tabId},
-        files: ['contentScript.js']
+        files: ['contentLibraryScript.js']
     }, () => {
         console.log('Content script injected into all frames in tab:', details.tabId);
     });
-}, {url: [{urlMatches : 'https://a.ibdocs.org/*'}]}); // Adjust the urlMatches pattern to suit your needs
+}, {url: [{urlMatches : 'https://library.licejus.lt/*'}]}); // Adjust the urlMatches pattern to suit your needs
