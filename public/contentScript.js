@@ -1,7 +1,5 @@
 (function() {
-    console.log("sitas cia gerai bus turetuveikt")
     if (!history.state || !history.state.buttonsAdded) {
-        console.log("praejo history")
         const tailwindLink = document.createElement('link');
         tailwindLink.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
         tailwindLink.type = 'text/css';
