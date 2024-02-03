@@ -15,19 +15,17 @@
     ],
     "host_permissions": [
       "http://*/*",
-      "https://*/*",
-      "http://repo4udpz5ip2sk7m4c2aazxroaivsyw2dj5ctsnyfx2ami2ayhn43ad.onion/*"
+      "https://*/*"
     ],
     "background": {
       "service_worker": "background.js"
     },
     "content_scripts": [
       {
-          "matches": ["<all_urls>"],
-          "css": ["mycss.css"],
-          "js": ["contentScript.js"]
+        "matches": ["https://library.licejus.lt/*"],
+        "css": ["mycss.css"]
       }
-  ]
+    ]
     
   }
   

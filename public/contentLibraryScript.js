@@ -26,8 +26,8 @@
                         const button = document.createElement('button');
                         
                         // Apply CSS classes
-                        button.classList.add('my-custom-button');
-                        button.classList.add(isItemStored ? 'stored-item' : 'not-stored-item');
+                        button.classList.add('myCustomButton');
+                        button.classList.add(isItemStored ? 'storedItem' : 'notStoredItem');
                         item.className = "item ";
                         
                         // Create SVG and path for the icon
@@ -54,7 +54,7 @@
                                         // Change icon color to red
                                         path.setAttribute('fill', 'red');
                                         // Change button background to red
-                                        button.classList.add('myCustomButton notStoredItem');
+                                        button.className = 'myCustomButton notStoredItem'
 
                                     });
                                 } else {
@@ -66,7 +66,7 @@
                                         // Change icon color to green
                                         path.setAttribute('fill', 'green');
                                         // Change button background to green
-                                        button.classList.add('myCustomButton storedItem');
+                                        button.className = 'myCustomButton storedItem'
                                     });
                                 }
                             })
